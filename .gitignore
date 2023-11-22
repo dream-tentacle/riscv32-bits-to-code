@@ -1,0 +1,7 @@
+*
+!*.py
+!output
+!src
+!add.txt
+!README.md
+!.gitignore
