@@ -1,4 +1,4 @@
-# riscv32-bit-to-code
+# riscv32-bits-to-code
 ### Translation Method
 To utilize this project, you have to put your `INSTPAT` codes into `./nemu_instr.txt`. If you don't have one, please contact me.
 Only the following format content should be added into the file:
