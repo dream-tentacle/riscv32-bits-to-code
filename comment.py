@@ -19,5 +19,5 @@ for filename in os.listdir(load_path):
             if line[0] == "@":
                 f.write(line)
                 continue
-            wr = line[:-1] + "  \\\\ " + explain(rules, line)
+            wr = line[:-1] + "  // " + explain(rules, line)
             f.write(wr + "\n")
