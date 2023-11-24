@@ -34,9 +34,9 @@ def explain(rules, x, base=16):
                 break
         if not flag:
             continue
-        rd = hex(int(x[20:25]))
-        rs1 = hex(int(x[12:17]))
-        rs2 = hex(int(x[7:12]))
+        rd = hex(int(x[20:25], base=2))
+        rs1 = hex(int(x[12:17], base=2))
+        rs2 = hex(int(x[7:12], base=2))
         imm = ""
         if rule["instr_type"] == "I":
             imm = x[0:12]
