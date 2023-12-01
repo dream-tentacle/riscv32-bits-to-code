@@ -41,7 +41,7 @@ def explain(rules, x, base=16):
         if rule["instr_type"] == "I":
             imm = x[0:12]
         elif rule["instr_type"] == "U":
-            imm = x[1:20] + "0" * 12
+            imm = x[0:20] + "0" * 12
         elif rule["instr_type"] == "S":
             imm = x[0:7] + x[20:25]
         elif rule["instr_type"] == "J":
