@@ -15,9 +15,12 @@ for filename in os.listdir(load_path):
         content = f.readlines()
         f.close()
         f = open(save_path + filename, "w")
+        current_line = 0
         for line in content:
             if line[0] == "@":
                 f.write(line)
+                current_line = int(line[1:], base=16)
                 continue
-            wr = line[:-1] + "  // " + explain(rules, line)
+            wr = f"{line[:-1]}  // 0x{hex(current_line)} {explain(rules, line)}"
+            current_line += 4
             f.write(wr + "\n")

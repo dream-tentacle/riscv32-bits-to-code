@@ -59,7 +59,7 @@ def explain(rules, x, base=16):
         else:
             imm = "type_error"
         replace_list = [
-            ["rd", f"{rd}"],
+            ["(rd)", f"({rd})"],
             ["rs1", f"{rs1}"],
             ["rs2", f"{rs2}"],
             ["src1", f"R({rs1})"],
